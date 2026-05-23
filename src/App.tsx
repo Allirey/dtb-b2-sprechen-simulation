@@ -126,7 +126,7 @@ const MenuScreen = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-screen p-8 select-none">
+    <div className="flex flex-col items-center justify-center w-full h-svh p-8 select-none">
       <h1 className="text-4xl font-bold text-gray-900! mb-12">DTB B2 Sprechen Prüfungssimulator</h1>
 
       <div className="flex flex-col gap-4 w-full max-w-4xl">
@@ -207,7 +207,7 @@ const TimerScreen = () => {
   };
 
   return (
-    <div className={`w-full h-screen flex flex-col justify-between py-8 px-3 sm:px-12 md:px-32 transition-colors duration-500 select-none ${bgClass}`}>
+    <div className={`w-full h-svh flex flex-col justify-between py-8 px-3 sm:px-12 md:px-32 transition-colors duration-500 select-none ${bgClass}`}>
 
       {/* Top Header: Metadata on Left, Compact Timers on Right */}
       <div className="flex justify-between items-center border-b border-gray-200/60 pb-4 h-16">
@@ -337,7 +337,7 @@ const ResultsScreen = () => {
   }, [stepTimes]);
 
   return (
-    <div className="w-full h-screen flex flex-col p-6 items-center justify-between select-none bg-gray-50">
+    <div className="w-full h-svh flex flex-col p-6 items-center justify-between select-none bg-gray-50">
       <div className="w-full max-w-6xl flex flex-col h-[85vh]">
         <h2 className="text-3xl font-bold text-gray-900! mb-4 text-center">Auswertung</h2>
 
@@ -399,7 +399,7 @@ export default function App() {
 
   return (
     <div
-      className="bg-gray-50 text-gray-900 font-sans w-full h-screen overflow-hidden flex"
+      className="bg-gray-50 text-gray-900 font-sans w-full h-svh overflow-hidden flex"
       style={{ colorScheme: 'light' }}
     >
       {appState === 'menu' && <MenuScreen />}
