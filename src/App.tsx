@@ -207,7 +207,7 @@ const TimerScreen = () => {
   };
 
   return (
-    <div className={`w-full h-screen flex flex-col justify-between py-8 px-32 transition-colors duration-500 select-none ${bgClass}`}>
+    <div className={`w-full h-screen flex flex-col justify-between py-8 px-3 sm:px-12 md:px-32 transition-colors duration-500 select-none ${bgClass}`}>
 
       {/* Top Header: Metadata on Left, Compact Timers on Right */}
       <div className="flex justify-between items-center border-b border-gray-200/60 pb-4 h-16">
@@ -215,7 +215,7 @@ const TimerScreen = () => {
           <span className="place-self-start bg-gray-900/10 px-3 py-1 rounded-full text-gray-700 font-medium text-xs">
             Schritt {currentIndex + 1} von {steps.length}
           </span>
-          <h3 className="text-xl font-bold text-gray-900 mt-1">{currentStep.title}</h3>
+          <h3 className="text-md sm:text-xl font-bold text-gray-900 mt-1">{currentStep.title}</h3>
         </div>
 
         {/* Corner Timers Dashboard */}
@@ -240,7 +240,7 @@ const TimerScreen = () => {
         <p className="text-lg text-gray-600 mb-6 text-center select-text">{currentStep.description}</p>
 
         {currentStep.content && (
-          <div className="w-full max-h-[55vh] overflow-y-auto pr-1 select-text">
+          <div className="w-full sm:max-h-[55vh] max-h-[50vh] overflow-y-auto pr-1 select-text">
 
             {/* Part 1 Content Layout */}
             {currentStep.content.topics && (
@@ -294,7 +294,7 @@ const TimerScreen = () => {
 
       {/* Control Actions Row */}
       <div className="flex justify-between items-center border-t border-gray-200/40 pt-4 h-20">
-        <button onClick={handleAbort} className="cursor-pointer w-44 justify-center text-gray-500 hover:text-red-600 flex items-center gap-2 text-base font-medium transition-colors">
+        <button onClick={handleAbort} className="max-sm:text-sm cursor-pointer md:w-44 justify-center text-gray-500 hover:text-red-600 flex items-center gap-2 text-base font-medium transition-colors">
           <Square size={20} /> Abbrechen
         </button>
 
@@ -307,7 +307,7 @@ const TimerScreen = () => {
 
         <button
           onClick={handleNext}
-          className="cursor-pointer bg-blue-600 hover:bg-blue-700 w-44 justify-center text-white font-bold py-3.5 px-6 rounded-xl shadow-md flex items-center gap-2 transition-transform active:scale-95"
+          className="max-sm:text-sm cursor-pointer bg-blue-600 hover:bg-blue-700 md:w-44 justify-center text-white font-bold py-3.5 sm:px-6 px-3 rounded-xl shadow-md flex items-center gap-2 transition-transform active:scale-95"
         >
           {currentIndex === steps.length - 1 ? (
             <>Abschließen <Check size={22} /></>
